@@ -32,7 +32,16 @@ function playGame() {
         console.log(`Round ${i}`)
         let {humanScore, computerScore} = playRound(getHumanChoice(), getComputerChoice())
     }
+    
     console.log(`Your score: ${humanScore}. Computer Score: ${computerScore}`)
+
+    if (humanScore === computerScore) {
+        console.log('It is a Tie')
+    } else if (humanScore > computerScore) {
+        console.log('You won!')
+    } else {
+        console.log('You lost')
+    }
 }
 
 playGame()
