@@ -6,43 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // ask for computer input
-        //ask for human input
-        //compare inputs and get winner
-        //add winner's score
-        //keep the game going till smn gets 5 points
-        
-        function getComputerChoice(options = 'rock paper scissors') {
-            let words = options.split(' ')
-            let random = Math.floor(Math.random() * words.length)
-            return words[random]
-        }
-
-        function getHumanChoice() {
-            let choice = prompt('Rock, Paper or Scissors: ')
-            return choice
-        }
-
-        let humanScore = 0,
-            computerScore = 0      
-        
-        function playRound(humanChoice, computerChoice) {
-            (humanChoice().toLowerCase() === computerChoice) ? console.log('Tie') :
-            (humanChoice().toLowerCase() === 'rock' && computerChoice == 'scissors' || humanChoice().toLowerCase() === 'paper' && computerChoice == 'rock' || humanChoice().toLowerCase() === 'scissors' && computerChoice == 'paper') ? (humanScore++, console.log(`You win. Computer chose ${computerChoice}`)) :
-            (computerScore++, console.log(`You lose. Computer chose ${computerChoice}`));
-        }
-
-        function playGame() {
-            playRound(getHumanChoice, getComputerChoice())
-            playRound(getHumanChoice, getComputerChoice())
-            playRound(getHumanChoice, getComputerChoice())
-            playRound(getHumanChoice, getComputerChoice())
-            playRound(getHumanChoice, getComputerChoice())
-        }
-    
-        playGame()
-        console.log("Total scores: You - " + humanScore + "; Computer - " + computerScrore);
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
