@@ -2,10 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="wce-wtial-scale=1.0">
+    <title>ROCK-PAPER-SCISSORS</title>
 </head>
-<body>
-    <script src="./script.js"></script>
+<body style="padding: 0 30px;">
+    <h1>Rock, Paper, Scissors</h1>        
+    
+    <div id="button-container" style="display: flex; gap: 12px;">
+        <button onclick="playRound('rock')">Rock</button>
+        <button onclick="playRound('paper')">Paper</button>
+        <button onclick="playRound('scissors')">Scissors</button>
+        <button id="againButton" onclick="playAgain()">Play Again</button>
+    </div>
+
+    <div id="choices">
+        <p id="playerChoice"></p>
+        <p id="computerChoice"></p>
+        <p id="result"></p>
+    </div>
+
+    <div id="scores">
+        <p id="playerScore"></p>
+        <p id="computerScore"></p>
+    </div>
+
+    <p id="finalScore" style="font-size: larger;"></p>
+    
+    <script src="./script.js"></script> 
 </body>
 </html>
