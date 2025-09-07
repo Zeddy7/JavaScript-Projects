@@ -7,7 +7,7 @@ const playerChoice = document.getElementById('playerChoice'),
     againButton = document.getElementById('againButton');
 let humanScore = 0,
     computerScore = 0,
-    choices = ['rock', 'paper', 'scissors'];
+    choices = ['🪨', '📃', '✂️'];
 againButton.style.display = "none";
 
 function playRound(humanChoice) {
@@ -18,9 +18,9 @@ function playRound(humanChoice) {
             playerChoice.textContent = `PLAYER: ${humanChoice}`
             computerChoiceHtml.textContent = `COMPUTER: ${computerChoice}`
             result.textContent = `IT'S A TIE`;
-        } else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
-            humanChoice === 'paper' && computerChoice === 'rock' ||
-            humanChoice === 'scissors' && computerChoice === 'paper') {
+        } else if (humanChoice === '🪨' && computerChoice === '✂️' ||
+            humanChoice === '📃' && computerChoice === '🪨' ||
+            humanChoice === '✂️' && computerChoice === '📃') {
                 humanScore++;
                 playerChoice.textContent = `PLAYER: ${humanChoice}`
                 computerChoiceHtml.textContent = `COMPUTER: ${computerChoice}`
@@ -55,7 +55,6 @@ function playAgain() {
     computerScoreHtml.textContent = ``
     playerChoice.textContent = ``
     computerChoiceHtml.textContent = ``
-    result.textContent = ``;
     finalScore.textContent = ''
-    result.textContent = "";
+    result.innerHTML = 'Choose your weapon. <br>First to score 5 points wins the game</br>';
 }

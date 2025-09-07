@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="wce-wtial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>ROCK-PAPER-SCISSORS</title>
 </head>
-<body style="padding: 0 30px;">
-    <h1>Rock, Paper, Scissors</h1>        
+<body >
+    <h1>Rock Paper Scissors</h1>        
+    <p id="finalScore"></p>
     
-    <div id="button-container" style="display: flex; gap: 12px;">
-        <button onclick="playRound('rock')">Rock</button>
-        <button onclick="playRound('paper')">Paper</button>
-        <button onclick="playRound('scissors')">Scissors</button>
-        <button id="againButton" onclick="playAgain()">Play Again</button>
+    <div id="button-container">
+        <button class="buttons" onclick="playRound('🪨')">🪨</button>
+        <button class="buttons" onclick="playRound('📃')">📃</button>
+        <button class="buttons" onclick="playRound('✂️')">✂️</button>
+        <button id="againButton" onclick="playAgain()">▶️</button>
     </div>
-
+    
+    <p id="result">Choose your weapon. <br>First to score 5 points wins the game</br></p>
+    
     <div id="choices">
         <p id="playerChoice"></p>
         <p id="computerChoice"></p>
-        <p id="result"></p>
     </div>
-
+    
     <div id="scores">
         <p id="playerScore"></p>
         <p id="computerScore"></p>
-    </div>
-
-    <p id="finalScore" style="font-size: larger;"></p>
-    
+    </div>    
     <script src="./script.js"></script> 
 </body>
 </html>
